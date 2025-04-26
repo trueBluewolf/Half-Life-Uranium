@@ -1,0 +1,2 @@
+Possible add other Uranium products spoilage
+Uranium-235 spoil result should have a chance to be Uranium-238 or nothing (Possible done with SpoilToTriggerResult)
