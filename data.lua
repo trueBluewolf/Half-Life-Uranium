@@ -1,11 +1,3 @@
---#region libraries
-
--- Adds runtime-spoilage-library to data run time, defined as rsl
--- https://github.com/SirPuck/runtime-spoilage-library/blob/main/README.md
-local rsl = require("__runtime-spoilage-library__/data_registry")
-
---#endregion
-
 --#region Uranium-235
 
 -- Sets up spoil ticks (Ticks = 1/60 of a second)
