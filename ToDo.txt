@@ -1,4 +1,2 @@
-Uranium-235 should spoil into a new item 'Decaying Uranium'
-
 Decaying Uranium can spoil into nothing and can only be crafted into Uranium process
 basically a chance to turn into 238 or 235.
