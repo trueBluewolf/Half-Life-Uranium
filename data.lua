@@ -59,7 +59,11 @@ data:extend{nothing}
 
 --#region Recipes
 
+--#region kovarex enrichment process
+
 -- Always creates fresh Uranium-235 every craft
 data.raw.recipe["kovarex-enrichment-process"].result_is_always_fresh = true
+
+--#endregion
 
 --#endregion
