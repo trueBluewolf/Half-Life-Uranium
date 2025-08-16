@@ -1,9 +1,7 @@
---#region Items
-
 --#region item Uranium-235
 
 -- Sets up spoil ticks (Ticks = 1/60 of a second)
-data.raw.item["uranium-235"].spoil_ticks = 4 * 60^3 -- default value (4 Hours(4*60^3))
+data.raw.item["uranium-235"].spoil_ticks = settings.startup["uranium-235-decay-timer-setting"].value * 60 -- multiply the value by 60 ticks
 
 -- Makes Uranium-235 spoil to Uranium-238
 data.raw.item["uranium-235"].spoil_result = "decaying-uranium"
@@ -30,29 +28,10 @@ decayingUranium.pictures = {
 decayingUranium.subgroup = "uranium-processing"
 
 decayingUranium.stack_size = 100
-decayingUranium.spoil_ticks = 6 * 60^2 -- default value (6 Mins(6*60^2))
-decayingUranium.spoil_result = "nothing"
+decayingUranium.spoil_ticks = settings.startup["uranium-decaying-timer-setting"].value * 60
+--decayingUranium.spoil_result = "nothing"
 
 data:extend{decayingUranium}
---#endregion
-
---#region item Nothing
-local nothing = table.deepcopy(data.raw["item"]["iron-plate"])
-
-nothing.name = "nothing"
-nothing.icons = {
-    {
-        icon = "__base__/graphics/icons/signal/signal-no-entry.png",
-        icon_size = nothing.icon_size,
-        tint = {r = 1, g = 1, b = 1, a = 1}
-    }
-}
-nothing.subgroup = "uranium-processing"
-nothing.order = "zzz"
-
-nothing.spoil_ticks = 1 -- 1 tick (1/60 of a second)
-
-data:extend{nothing}
 --#endregion
 
 --#region Recipes
@@ -79,9 +58,8 @@ local decayingUraniumEnrichmentProcess = {
     energy_required = 60,
 
     results = {
-        {type = "item", name = "uranium-235", amount = 1, probability = .07},
-        {type = "item", name = "uranium-238", amount = 1, probability = .88},
-        {type = "item", name = "nothing",     amount = 1, probability = .05}
+        {type = "item", name = "uranium-235", amount = 1, probability = .10},
+        {type = "item", name = "uranium-238", amount = 1, probability = .85}
     },
 
     result_is_always_fresh = true
