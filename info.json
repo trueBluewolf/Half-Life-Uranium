@@ -1,9 +1,9 @@
 {
     "name": "Half-Life-Uranium",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "title": "Half Life Uranium",
     "author": "Bluewolf",
-    "description": "Adds spoilage to Uranium-235, decays to Uranium 238",
+    "description": "Adds spoilage to Uranium-235, decays to Decaying Uranium. Process this Decay form back into uranium again, adding more choas and early spoilage mangement to Nauvis",
     "factorio_version": "2.0",
     "dependencies": [
         "base >= 2.0.0"
